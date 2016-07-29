@@ -74,18 +74,18 @@ echo "Compiling DSLs in $OutDir ..."
 
 
 # Copy unmodified AMLs from Origin...
-#echo
-#echo "---------------------------------------------------------"
-#echo "Copying unmodified SSDTs to $OutDir ..."
-#
-#for origin in $(cd $OriginDir; ls *.aml); do
-#	if [ -f $OutDir/$origin ] ; then
-#		echo "Patched $origin found, skipping ... "
-#	else
-#		echo "Copying $origin to $OutDir ..."
-#		cp $OriginDir/$origin $OutDir
-#	fi
-#done
+echo
+echo "---------------------------------------------------------"
+echo "Copying unmodified SSDTs to $OutDir ..."
+
+for origin in $(cd $OriginDir; ls *.aml); do
+	if [ -f $OutDir/$origin ] ; then
+		echo "Patched $origin found, skipping ... "
+	else
+		echo "Copying $origin to $OutDir ..."
+		cp $OriginDir/$origin $OutDir
+	fi
+done
 
 
 echo; echo
