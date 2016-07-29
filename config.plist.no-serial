@@ -28,6 +28,17 @@
 		<array>
 			<string>SSDT.aml</string>
 			<string>SSDT-0.aml</string>
+			<string>SSDT-1.aml</string>
+			<string>SSDT-2.aml</string>
+			<string>SSDT-3.aml</string>
+			<string>SSDT-4x.aml</string>
+			<string>SSDT-5x.aml</string>
+			<string>SSDT-6x.aml</string>
+			<string>SSDT-7x.aml</string>
+			<string>SSDT-8x.aml</string>
+			<string>SSDT-9x.aml</string>
+			<string>SSDT-10x.aml</string>
+			<string>SSDT-11.aml</string>
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-XHC-T460S.aml</string>
 		</array>
@@ -138,22 +149,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Bluetooth Handoff</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIXAdFwPt0g=
-				</data>
-				<key>Name</key>
-				<string>IOBluetoothFamily</string>
-				<key>Replace</key>
-				<data>
-				Qb4PAAAA61k=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>AppleHDA ALC 293 #1</string>
 				<key>Disabled</key>
 				<false/>
@@ -166,6 +161,22 @@
 				<key>Replace</key>
 				<data>
 				kwLsEA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC 293 #2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				hAjsEA==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
 				</data>
 			</dict>
 			<dict>
@@ -186,12 +197,12 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC 293 #2</string>
+				<string>AppleHDA ALC 293 #3</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				hAjsEA==
+				hQjsEA==
 				</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
@@ -218,18 +229,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC 293 #3</string>
+				<string>Bluetooth Handoff</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				hQjsEA==
+				SIXAdFwPt0g=
 				</data>
 				<key>Name</key>
-				<string>AppleHDA</string>
+				<string>IOBluetoothFamily</string>
 				<key>Replace</key>
 				<data>
-				AAAAAA==
+				Qb4PAAAA61k=
 				</data>
 			</dict>
 		</array>
@@ -278,10 +289,12 @@
 				<dict>
 					<key>Frequency</key>
 					<string>2133</string>
+					<key>Part</key>
+					<string>onboard</string>
 					<key>Size</key>
-					<string>16384</string>
+					<string>4096</string>
 					<key>Slot</key>
-					<string>1</string>
+					<string>0</string>
 					<key>Type</key>
 					<string>DDR4</string>
 					<key>Vendor</key>
@@ -290,10 +303,12 @@
 				<dict>
 					<key>Frequency</key>
 					<string>2133</string>
+					<key>Part</key>
+					<string>M471A2K43BB1-CPB</string>
 					<key>Size</key>
-					<string>4096</string>
+					<string>16384</string>
 					<key>Slot</key>
-					<string>0</string>
+					<string>1</string>
 					<key>Type</key>
 					<string>DDR4</string>
 					<key>Vendor</key>
