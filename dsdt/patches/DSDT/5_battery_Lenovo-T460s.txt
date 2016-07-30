@@ -409,7 +409,7 @@ begin
 
                     // _BIF 1 - Design Capacity - add BAT0 and BAT1 values\n
                     //\n
-                    Local0[1] = 50 + CVWA(DerefOf(Local0[1]), B0DV, B0CO) + CVWA(DerefOf(Local1[1]), B1DV, B1CO)\n
+                    Local0[1] = CVWA(DerefOf(Local0[1]), B0DV, B0CO) + CVWA(DerefOf(Local1[1]), B1DV, B1CO)\n
                     // _BIF 2 - Last Full Charge Capacity - add BAT0 and BAT1 values\n
                     Local0[2] = CVWA(DerefOf(Local0[2]), B0DV, B0CO) + CVWA(DerefOf(Local1[2]), B1DV, B1CO)\n
                     // _BIF 3 - Battery Technology - leave BAT0 value\n
