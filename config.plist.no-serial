@@ -149,54 +149,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC 293 #1</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hBnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				kwLsEA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #2</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hAjsEA==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Change 15 port limit to 26 in AppleUSBXHCIPCI</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g72M/v//EA==
-				</data>
-				<key>Name</key>
-				<string>AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g72M/v//Gw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>AppleHDA ALC 293 #3</string>
 				<key>Disabled</key>
 				<false/>
@@ -229,18 +181,82 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>AppleHDA ALC 293 #2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				hAjsEA==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Bluetooth Handoff</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				SIXAdFwPt0g=
+				SIX/dEdIiwc=
 				</data>
 				<key>Name</key>
 				<string>IOBluetoothFamily</string>
 				<key>Replace</key>
 				<data>
-				Qb4PAAAA61k=
+				Qb4PAAAA60Q=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC 293 #1</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				hBnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				kwLsEA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Change 15 port limit to 26 in AppleUSBXHCIPCI</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g72M/v//EA==
+				</data>
+				<key>Name</key>
+				<string>AppleUSBXHCIPCI</string>
+				<key>Replace</key>
+				<data>
+				g72M/v//Gw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.11-BCM94352-5GHz-US-FCC-dv</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QYP8/3QsSA==
+				</data>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>
+				ZscGVVPrKw==
 				</data>
 			</dict>
 		</array>
@@ -290,11 +306,11 @@
 					<key>Frequency</key>
 					<string>2133</string>
 					<key>Part</key>
-					<string>onboard</string>
+					<string>M471A2K43BB1-CPB</string>
 					<key>Size</key>
-					<string>4096</string>
+					<string>16384</string>
 					<key>Slot</key>
-					<string>0</string>
+					<string>1</string>
 					<key>Type</key>
 					<string>DDR4</string>
 					<key>Vendor</key>
@@ -304,11 +320,11 @@
 					<key>Frequency</key>
 					<string>2133</string>
 					<key>Part</key>
-					<string>M471A2K43BB1-CPB</string>
+					<string>onboard</string>
 					<key>Size</key>
-					<string>16384</string>
+					<string>4096</string>
 					<key>Slot</key>
-					<string>1</string>
+					<string>0</string>
 					<key>Type</key>
 					<string>DDR4</string>
 					<key>Vendor</key>
