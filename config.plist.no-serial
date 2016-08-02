@@ -298,8 +298,6 @@
 		<string>Apple Inc.</string>
 		<key>Memory</key>
 		<dict>
-			<key>Channels</key>
-			<integer>2</integer>
 			<key>Modules</key>
 			<array>
 				<dict>
@@ -331,8 +329,6 @@
 					<string>Lenovo</string>
 				</dict>
 			</array>
-			<key>SlotCount</key>
-			<integer>4</integer>
 		</dict>
 		<key>Mobile</key>
 		<true/>

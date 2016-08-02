@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>15G12a</string>
+	<string>15G31</string>
 	<key>CFBundleExecutable</key>
 	<string>VoodooPS2Keyboard</string>
 	<key>CFBundleGetInfoString</key>
@@ -574,18 +574,6 @@
 							<string>57=57</string>
 							<string>58=58</string>
 						</array>
-					</dict>
-				</dict>
-				<key>LENOVO</key>
-				<dict>
-					<key>T460</key>
-					<string>ThinkPad</string>
-					<key>ThinkPad</key>
-					<dict>
-						<key>ActionSwipeLeft</key>
-						<string>37 d, 21 d, 21 u, 37 u</string>
-						<key>ActionSwipeRight</key>
-						<string>37 d, 1e d, 1e u, 37 u</string>
 					</dict>
 				</dict>
 				<key>SECCSD</key>

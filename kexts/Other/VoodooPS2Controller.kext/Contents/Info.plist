@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>15G12a</string>
+	<string>15G31</string>
 	<key>CFBundleExecutable</key>
 	<string>VoodooPS2Controller</string>
 	<key>CFBundleGetInfoString</key>
@@ -125,18 +125,6 @@
 					<string>ProBook</string>
 					<key>ProBook-87</key>
 					<string>ProBook</string>
-				</dict>
-				<key>Lenovo</key>
-				<dict>
-					<key>T420</key>
-					<string>ThinkPad</string>
-					<key>ThinkPad</key>
-					<dict>
-						<key>MouseWakeFirst</key>
-						<false/>
-						<key>WakeDelay</key>
-						<integer>0</integer>
-					</dict>
 				</dict>
 			</dict>
 		</dict>

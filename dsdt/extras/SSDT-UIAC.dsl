@@ -17,96 +17,46 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC", 0)
                 "port-count", Buffer() { 0x10, 0, 0, 0 },
                 "ports", Package()
                 {
-                    "HSP0", Package()
+                    "HS01", Package()
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x01, 0, 0, 0 },
                     },
-//                    "HSP1", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x02, 0, 0, 0 },
-//                    },
-                    "HSP2", Package()
+                    "HS03", Package()
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x03, 0, 0, 0 },
                     },
-                    "HSP3", Package()
+                    "HS04", Package()
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x04, 0, 0, 0 },
                     },
-//                    "HSP4", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x05, 0, 0, 0 },
-//                    },
-//                    "HSP5", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x6, 0, 0, 0 },
-//                    },
-                    "HSP6", Package()
+                    "HS07", Package()
                     {
                         "UsbConnector", 255,
                         "port", Buffer() { 0x07, 0, 0, 0 },
                     },
-                    "HSP7", Package()
+                    "HS08", Package()
                     {
                         "UsbConnector", 255,
                         "port", Buffer() { 0x08, 0, 0, 0 },
                     },
-//                    "HSP8", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x09, 0, 0, 0 },
-//                    },
-//                    "HSP9", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x0a, 0, 0, 0 },
-//                    },
-//                    "HSPA", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x0b, 0, 0, 0 },
-//                    },
-//                    "HSPB", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x0c, 0, 0, 0 },
-//                    },
-                    "SSP0", Package()
+                    "SS01", Package()
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x0d, 0, 0, 0 },
                     },
-//                    "SSP1", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x0e, 0, 0, 0 },
-//                    },
-                    "SSP2", Package()
+                    "SS03", Package()
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x0f, 0, 0, 0 },
                     },
-                    "SSP3", Package()
+                    "SS04", Package()
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x10, 0, 0, 0 },
                     },
-//                    "SSP4", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x11, 0, 0, 0 },
-//                    },
-//                    "SSP5", Package()
-//                    {
-//                        "UsbConnector", 3,
-//                        "port", Buffer() { 0x12, 0, 0, 0 },
-//                    },
                 },
             },
         })
