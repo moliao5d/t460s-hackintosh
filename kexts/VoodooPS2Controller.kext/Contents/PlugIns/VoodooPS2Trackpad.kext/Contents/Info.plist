@@ -323,13 +323,13 @@
 					<key>MouseMiddleScroll</key>
 					<true/>
 					<key>MouseMultiplierX</key>
-					<integer>2</integer>
+					<integer>20</integer>
 					<key>MouseMultiplierY</key>
-					<integer>2</integer>
+					<integer>20</integer>
 					<key>MouseScrollMultiplierX</key>
-					<integer>1</integer>
+					<integer>20</integer>
 					<key>MouseScrollMultiplierY</key>
-					<integer>1</integer>
+					<integer>20</integer>
 					<key>MultiFingerHorizontalDivisor</key>
 					<integer>13</integer>
 					<key>MultiFingerVerticalDivisor</key>
@@ -442,6 +442,22 @@
 					<string>ProBook</string>
 					<key>ProBook-87</key>
 					<string>ProBook</string>
+				</dict>
+				<key>LENOVO</key>
+				<dict>
+					<key>T460</key>
+					<string>ThinkPad</string>
+					<key>ThinkPad</key>
+					<dict>
+						<key>DynamicEWMode</key>
+						<true/>
+						<key>FakeMiddleButton</key>
+						<false/>
+						<key>MouseMultiplierX</key>
+						<integer>2</integer>
+						<key>MouseMultiplierY</key>
+						<integer>2</integer>
+					</dict>
 				</dict>
 			</dict>
 			<key>ProductID</key>

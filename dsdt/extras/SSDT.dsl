@@ -10,12 +10,12 @@
  *     Checksum         0x00
  *     OEM ID           "APPLE "
  *     OEM Table ID     "CpuPm"
- *     OEM Revision     0x00018900 (100608)
+ *     OEM Revision     0x00019000 (102400)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20140210 (538182160)
  */
 
-DefinitionBlock ("SSDT.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00018900)
+DefinitionBlock ("SSDT.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00019000)
 {
     External (\_PR_.CPU0, DeviceObj)
     External (\_PR_.CPU1, DeviceObj)
@@ -26,7 +26,7 @@ DefinitionBlock ("SSDT.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00018900)
     {
         Method (_INI, 0, NotSerialized)
         {
-            Store ("ssdtPRGen version....: 18.9 / Mac OS X 10.11.6 (15G31)", Debug)
+            Store ("ssdtPRGen version....: 19.0 / Mac OS X 10.11.6 (15G31)", Debug)
             Store ("custom mode..........: 0", Debug)
             Store ("host processor.......: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz", Debug)
             Store ("target processor.....: i7-6600U", Debug)
