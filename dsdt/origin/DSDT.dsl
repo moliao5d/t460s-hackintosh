@@ -5,13 +5,13 @@
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of DSDT.aml, Sat Jul 30 17:08:47 2016
+ * Disassembly of DSDT.aml, Fri Aug 12 21:34:31 2016
  *
  * Original Table Header:
  *     Signature        "DSDT"
  *     Length           0x00012331 (74545)
  *     Revision         0x02
- *     Checksum         0xFA
+ *     Checksum         0x9A
  *     OEM ID           "LENOVO"
  *     OEM Table ID     "TP-N1C  "
  *     OEM Revision     0x00001130 (4400)
@@ -483,7 +483,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
         })
     }
 
-    OperationRegion (MNVS, SystemMemory, 0xB7FCC018, 0x1000)
+    OperationRegion (MNVS, SystemMemory, 0xD7FCC018, 0x1000)
     Field (MNVS, DWordAcc, NoLock, Preserve)
     {
         Offset (0xD00), 
@@ -799,7 +799,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
         DBGB,   1024
     }
 
-    OperationRegion (GNVS, SystemMemory, 0xB7FBB000, 0x0600)
+    OperationRegion (GNVS, SystemMemory, 0xD7FBB000, 0x0600)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -14164,7 +14164,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
         }
     }
 
-    Name (PNVB, 0xB7FCBC98)
+    Name (PNVB, 0xD7FCBC98)
     Name (PNVL, 0x0204)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
