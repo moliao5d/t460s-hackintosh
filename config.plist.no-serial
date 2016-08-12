@@ -30,17 +30,8 @@
 			<string>SSDT-0.aml</string>
 			<string>SSDT-1.aml</string>
 			<string>SSDT-2.aml</string>
-			<string>SSDT-3.aml</string>
-			<string>SSDT-4x.aml</string>
-			<string>SSDT-5x.aml</string>
-			<string>SSDT-6x.aml</string>
-			<string>SSDT-7x.aml</string>
-			<string>SSDT-8x.aml</string>
-			<string>SSDT-9x.aml</string>
-			<string>SSDT-10x.aml</string>
-			<string>SSDT-11.aml</string>
 			<string>SSDT-UIAC.aml</string>
-			<string>SSDT-XHC-T460S.aml</string>
+			<string>SSDT-T460S.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -67,11 +58,6 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>Audio</key>
-		<dict>
-			<key>ResetHDA</key>
-			<true/>
-		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -149,6 +135,38 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>AppleHDA ALC 293 #1</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				hBnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				kwLsEA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC 293 #2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				hAjsEA==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>AppleHDA ALC 293 #3</string>
 				<key>Disabled</key>
 				<false/>
@@ -177,54 +195,6 @@
 				<key>Replace</key>
 				<data>
 				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #2</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hAjsEA==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Bluetooth Handoff</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIX/dEdIiwc=
-				</data>
-				<key>Name</key>
-				<string>IOBluetoothFamily</string>
-				<key>Replace</key>
-				<data>
-				Qb4PAAAA60Q=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #1</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hBnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				kwLsEA==
 				</data>
 			</dict>
 			<dict>
@@ -259,6 +229,38 @@
 				ZscGVVPrKw==
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Bluetooth Handoff</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SIX/dEdIiwc=
+				</data>
+				<key>Name</key>
+				<string>IOBluetoothFamily</string>
+				<key>Replace</key>
+				<data>
+				Qb4PAAAA60Q=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable TRIM for non-Apple SSDs</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				AEFQUExFIFNTRAA=
+				</data>
+				<key>Name</key>
+				<string>IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAAAAA=
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -267,8 +269,6 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>C02032109R5DC771H</string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
@@ -298,27 +298,15 @@
 		<string>Apple Inc.</string>
 		<key>Memory</key>
 		<dict>
+			<key>Channels</key>
+			<integer>2</integer>
 			<key>Modules</key>
 			<array>
 				<dict>
 					<key>Frequency</key>
 					<string>2133</string>
 					<key>Part</key>
-					<string>M471A2K43BB1-CPB</string>
-					<key>Size</key>
-					<string>16384</string>
-					<key>Slot</key>
-					<string>1</string>
-					<key>Type</key>
-					<string>DDR4</string>
-					<key>Vendor</key>
-					<string>Lenovo</string>
-				</dict>
-				<dict>
-					<key>Frequency</key>
-					<string>2133</string>
-					<key>Part</key>
-					<string>onboard</string>
+					<string>M471A223SDR4-CPB</string>
 					<key>Size</key>
 					<string>4096</string>
 					<key>Slot</key>
@@ -328,14 +316,30 @@
 					<key>Vendor</key>
 					<string>Lenovo</string>
 				</dict>
+				<dict>
+					<key>Frequency</key>
+					<string>2133</string>
+					<key>Part</key>
+					<string>M471A2K43BB1-CPB</string>
+					<key>Size</key>
+					<string>16384</string>
+					<key>Slot</key>
+					<string>2</string>
+					<key>Type</key>
+					<string>DDR4</string>
+					<key>Vendor</key>
+					<string>Lenovo</string>
+				</dict>
 			</array>
+			<key>SlotCount</key>
+			<integer>4</integer>
 		</dict>
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro11,1</string>
 		<key>Trust</key>
-		<false/>
+		<true/>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
