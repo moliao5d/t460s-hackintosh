@@ -24,19 +24,5 @@ DefinitionBlock ("", "SSDT", 2, "hack", "T460", 0)
         }
         Return(Local0)
     }
-
-    Scope (\_SB.PCI0.LPC.KBD)
-    {
-        // Select specific items in VoodooPS2Controller
-        Method(_DSM, 4)
-        {
-            If (!Arg2) { Return (Buffer() { 0x03 } ) }
-            Return (Package()
-            {
-                "RM,oem-id", "LENOVO",
-                "RM,oem-table-id", "T460",
-            })
-        }
-    }
 }
 //EOF

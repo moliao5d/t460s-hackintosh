@@ -30,6 +30,15 @@
 			<string>SSDT-0.aml</string>
 			<string>SSDT-1.aml</string>
 			<string>SSDT-2.aml</string>
+			<string>SSDT-3.aml</string>
+			<string>SSDT-4x.aml</string>
+			<string>SSDT-5x.aml</string>
+			<string>SSDT-6x.aml</string>
+			<string>SSDT-7x.aml</string>
+			<string>SSDT-8x.aml</string>
+			<string>SSDT-9x.aml</string>
+			<string>SSDT-10x.aml</string>
+			<string>SSDT-11.aml</string>
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-T460S.aml</string>
 		</array>
