@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>VoodooPS2Trackpad</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.8.24, Copyright Apple Computer, Inc. 2002-2003, mackerintel 2008, RehabMan 2012-2013</string>
+	<string>1.8.14, Copyright Apple Computer, Inc. 2002-2003, mackerintel 2008, RehabMan 2012-2013</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.rehabman.voodoo.driver.PS2Trackpad</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.24</string>
+	<string>1.8</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.8.24</string>
+	<string>1.8.14</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -98,10 +98,16 @@
 						<key>DisableDevice</key>
 						<true/>
 					</dict>
-					<key>ProBook-102</key>
-					<string>ProBook</string>
-					<key>ProBook-87</key>
-					<string>ProBook</string>
+				</dict>
+				<key>Lenovo</key>
+				<dict>
+					<key>Haswell-Ideapad</key>
+					<dict>
+						<key>DisableDevice</key>
+						<true/>
+					</dict>
+					<key>U430</key>
+					<string>Haswell-Ideapad</string>
 				</dict>
 			</dict>
 		</dict>
@@ -161,10 +167,16 @@
 						<key>DisableDevice</key>
 						<true/>
 					</dict>
-					<key>ProBook-102</key>
-					<string>ProBook</string>
-					<key>ProBook-87</key>
-					<string>ProBook</string>
+				</dict>
+				<key>Lenovo</key>
+				<dict>
+					<key>Haswell-Ideapad</key>
+					<dict>
+						<key>DisableDevice</key>
+						<true/>
+					</dict>
+					<key>U430</key>
+					<string>Haswell-Ideapad</string>
 				</dict>
 			</dict>
 		</dict>
@@ -282,8 +294,6 @@
 					<integer>1000000000</integer>
 					<key>DragLockTempMask</key>
 					<integer>1048592</integer>
-					<key>DynamicEWMode</key>
-					<false/>
 					<key>EdgeBottom</key>
 					<integer>1700</integer>
 					<key>EdgeLeft</key>
@@ -323,13 +333,13 @@
 					<key>MouseMiddleScroll</key>
 					<true/>
 					<key>MouseMultiplierX</key>
-					<integer>20</integer>
+					<integer>2</integer>
 					<key>MouseMultiplierY</key>
-					<integer>20</integer>
+					<integer>2</integer>
 					<key>MouseScrollMultiplierX</key>
-					<integer>20</integer>
+					<integer>1</integer>
 					<key>MouseScrollMultiplierY</key>
-					<integer>20</integer>
+					<integer>1</integer>
 					<key>MultiFingerHorizontalDivisor</key>
 					<integer>13</integer>
 					<key>MultiFingerVerticalDivisor</key>
@@ -438,26 +448,20 @@
 						<key>FingerZ</key>
 						<integer>40</integer>
 					</dict>
-					<key>ProBook-102</key>
-					<string>ProBook</string>
-					<key>ProBook-87</key>
-					<string>ProBook</string>
 				</dict>
 				<key>LENOVO</key>
 				<dict>
-					<key>T460</key>
-					<string>ThinkPad</string>
-					<key>ThinkPad</key>
+					<key>Haswell-Ideapad</key>
 					<dict>
-						<key>DynamicEWMode</key>
-						<true/>
-						<key>FakeMiddleButton</key>
-						<false/>
-						<key>MouseMultiplierX</key>
-						<integer>2</integer>
-						<key>MouseMultiplierY</key>
-						<integer>2</integer>
+						<key>MomentumScrollThreshY</key>
+						<integer>12</integer>
+						<key>MultiFingerHorizontalDivisor</key>
+						<integer>9</integer>
+						<key>MultiFingerVerticalDivisor</key>
+						<integer>9</integer>
 					</dict>
+					<key>U430</key>
+					<string>Haswell-Ideapad</string>
 				</dict>
 			</dict>
 			<key>ProductID</key>
@@ -477,7 +481,7 @@
 		<key>com.apple.kpi.mach</key>
 		<string>9.0.0</string>
 		<key>org.rehabman.voodoo.driver.PS2Controller</key>
-		<string>1.8.24</string>
+		<string>1.8.14</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Console</string>
