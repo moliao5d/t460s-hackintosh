@@ -5,11 +5,10 @@ DSDT patches, kexts and configuration files to make OSX work on Lenovo T460s.
 Credits:
 - Rehabman for custom DSDT patches, Kexts (IntelBacklight, BatteryManager, FakePCIID, USBInjectAll etc.) and 
 tools (patchmatic, iasl)
-- Pike R Alpha's ssdtPRgen for native power management
-- tluck for the custom Kexts forks and DSDTs to overcome some T460 specific requirements,
-- shmilee the home/end key bindings 
+- Pike R. Alpha's ssdtPRgen for native power management,
+- tluck for the thinkpad theme, custom Kexts forks and DSDT patches to overcome some T460 specific requirements,
+- shmilee for the home/end key bindings and DSDT patches,
 - the fantastic community at tonymacx86 and insanelymac
-
 
 ## My T460s
 - i7-6600U
@@ -29,8 +28,7 @@ With Rehabman's patchmatic and iasl installed, you can capture origin DSDT/SSDTs
 put the decompiled DSL in ```dsdt/origin``` directory and run the ```autoPatch.sh``` script to generate patched 
 DSDT and SSDTs.
 
-Copy the kexts to Clover's kext/Other (except AppleHDA_ALC293, CodecCommander, BrcmPatchRAM2 and BrcmFirmwareRepo, 
-which should go into /Library/Extension).
+Copy the kexts in ```kexts/Other``` to Clover's kext/Other directory, install those in ```kexts/LE``` to /Library/Extension.
 
 Remember to update Clover's config.plist. Use ```config.plist.no-serial``` as starting point.
 
