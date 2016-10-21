@@ -14,7 +14,7 @@ tools (patchmatic, iasl)
 - i7-6600U
 - Intel HD520 graphics
 - Non-touch 1920x1080 display
-- Replaced Wifi/BT with Broadcom BCM94532Z
+- Replaced Wifi/BT with Broadcom BCM94352Z (DW1560)
 - Samsung SM961 SSD
 
 ## Installation (Clover)
