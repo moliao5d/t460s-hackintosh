@@ -1,6 +1,6 @@
 # t460s-hackintosh
 
-DSDT patches, kexts and configuration files to make OSX work on Lenovo T460s.
+DSDT patches, kexts and configuration files to make OSX (El Capitan) work on Lenovo T460s.
 
 Credits:
 - Rehabman for custom DSDT patches, Kexts (IntelBacklight, BatteryManager, FakePCIID, USBInjectAll etc.) and 
