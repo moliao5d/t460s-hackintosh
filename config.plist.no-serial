@@ -73,6 +73,17 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>AddProperties</key>
+		<array>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
+				<string>AAPL,GfxYTile</string>
+				<key>Value</key>
+				<data>AQAAAA==</data>
+			</dict>
+		</array>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -198,167 +209,299 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HD 520 HDMI</string>
-				<key>Find</key>
-				<data>
-				AgQKAAAEAAA=
-				</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AgQKAAAIAAA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HD 520 HDMI # 2</string>
-				<key>Find</key>
-				<data>
-				AQUJAAAEAAA=
-				</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AQUJAAAIAAA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Change 15 port limit to 26 in AppleUSBXHCIPCI</string>
+				<string>AppleHDA ALC 293 #5</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
-				<data>g72M/v//EA==</data>
+				<data>QcYGAEmLvCQ=</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>QcYGAUmLvCQ=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC 293 #6</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>QcYGAEiLu2g=</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>QcYGAUiLu2g=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC 293 #7</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>QcaGQwEAAAA=</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>QcaGQwEAAAE=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change 15 port limit to 26 in XHCI kext (100-series)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g710////EA==</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>AppleUSBXHCIPCI</string>
 				<key>Replace</key>
-				<data>g72M/v//Gw==</data>
+				<data>g710////Gw==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>10.11-BCM94352-5GHz-US-FCC-dv</string>
+				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>QYP8/3QsSA==</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>ZscGVVPrKw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Bluetooth Handoff</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>SIX/dEdIiwc=</data>
-				<key>Name</key>
-				<string>IOBluetoothFamily</string>
-				<key>Replace</key>
-				<data>Qb4PAAAA60Q=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SecondStagePatch 10.11</string>
-				<key>Find</key>
-				<data>
-				AQAAdRc=
-				</data>
+				<data>AQAAdSU=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
-				<data>
-				AQAAdBc=
-				</data>
+				<data>AQAA6yU=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>NVMe SSD IONameMatch</string>
+				<string>AirPortBrcm4360 - fcvo patch</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>gflSqgAAdSk=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>gflSqgAAZpA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AirPortBrcm4360 - PCI Error 1</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Find</key>
+				<data>QTnEdRs=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>InfoPlistPatch</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>QTnEZpA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AirPortBrcm4360 - PCI Error 2</string>
+				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
-				<data>PHN0cmluZz5wY2kxNDRkLGE4MDQ8L3N0cmluZz4=</data>
+				<data>QQ+3zTnBdQw=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
-				<data>PHN0cmluZz5wY2kxNDRkLGE4MDI8L3N0cmluZz4=</data>
+				<data>QQ+3zTnBZpA=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#01</string>
+				<string>AirPortBrcm4360 - PCI Error 3</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>g33EBHQG</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>g33EBGaQ</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AirPortBrcm4360 whitelist patch (board-id), 10.12.dp1, credit RehabMan</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>MdtMO33YdRI=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>Mdv/w5CQkJA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>BCM94352-Airport-Extreme</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>axAAAHUN</data>
+				<key>MatchOS</key>
+				<string>10.11.x,10.12.x</string>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>axAAAJCQ</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>BCM94352-5GHz-US-FCC-dv</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>gflSqgAAdSk=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>gflSqgAAZpA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x19160000 - T460 DP</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>AQUJAAAEAACHAQAA</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAIAACHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204, 0x19160000 - T460 HDMI</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AgQKAAAEAACHAQAA</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AgQKAAAIAACHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Skylake minStolenSize patch (credit RehabMan based on original by Austere.J) for Sierra</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>iUXIOcZ2UQ==</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>iUXIOcbrUQ==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#1</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>hfZ0YUHB5wxJY/++IAAAAA==</data>
+				<data>ibP4AgAAweAMBQAQAACJgw==</data>
 				<key>Replace</key>
-				<data>hfZ0YUHB5wlJY/++IAAAAA==</data>
+				<data>ibP4AgAAweAJBQAQAACJgw==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#02&amp;03</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#2</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>AAAAg/kMdVhBx4akAAAAABAAAEg=</data>
+				<data>D7aMiIIAAACD+QwPhTIBAA==</data>
 				<key>Replace</key>
-				<data>AAAAg/kJdVhBx4akAAAAAAIAAEg=</data>
+				<data>D7aMiIIAAACD+QkPhTIBAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#04</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#3</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>SI2G/w8AAEjB6AwPtw+B4Q==</data>
+				<data>AMeDpAAAAAAQAABIi0gISA==</data>
 				<key>Replace</key>
-				<data>SI2G/w8AAEjB6AkPtw+B4Q==</data>
+				<data>AMeDpAAAAAACAABIi0gISA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#05&amp;06</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#4</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>SIHm/w8AAEgB1kiB/v8PAAB3PEg=</data>
+				<data>SYnGTYX2dGFBwecMSWP/vg==</data>
 				<key>Replace</key>
-				<data>SIHm/wEAAEgB1kiB/v8BAAB3PEg=</data>
+				<data>SYnGTYX2dGFBwecJSWP/vg==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#07&amp;08&amp;09</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#5</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>DwAAScHuDEmLTQBIictIgeP/DwAAD5XAD7bARAHwg/gCD4W4AAAATI2hABAAAEyJ4EglAPD//0mJjyIBAABJiYcqAQAAQb4AEAAASSneSI0=</data>
+				<data>hv8PAABIwegMD7cPgeH/Dw==</data>
 				<key>Replace</key>
-				<data>DwAAScHuCUmLTQBIictIgeP/DwAAD5XAD7bARAHwg/gCD4W4AAAATI2hAAIAAEyJ4EglAPD//0mJjyIBAABJiYcqAQAAQb4AAgAASSneSI0=</data>
+				<data>hv8PAABIwegJD7cPgeH/Dw==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#10</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#6_7</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>hyoBAAC6ABAAAEgp</data>
+				<data>icGB4f8PAABIAdFIgfn/DwAAdzs=</data>
 				<key>Replace</key>
-				<data>hyoBAAC6AAIAAEgp</data>
+				<data>icGB4f8BAABIAdFIgfn/AQAAdzs=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#8</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Find</key>
+				<data>SYHF/w8AAEnB7QxJiwQkSA==</data>
+				<key>Replace</key>
+				<data>SYHF/w8AAEnB7QlJiwQkSA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#9_10</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Find</key>
+				<data>BgIAAEyNuAAQAABMiflIgeEA8P//SYmGGgEAAEmJjiIBAABBvAAQAABJKfQ=</data>
+				<key>Replace</key>
+				<data>BgIAAEyNuAACAABMiflIgeEA8P//SYmGGgEAAEmJjiIBAABBvAACAABJKfQ=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -368,21 +511,33 @@
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>AABJKdS4ABAAAE2L</data>
+				<data>AABJiY4iAQAAugAQAABIKQ==</data>
 				<key>Replace</key>
-				<data>AABJKdS4AAIAAE2L</data>
+				<data>AABJiY4iAQAAugACAABIKQ==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#12&amp;13</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#12</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>TYnXugAQAABFMclIid7oAAAAAE2J+kyLfdBJi4dgAQAATIls2PhJgcUAEAAASYHE</data>
+				<data>yAAAAEkp17gAEAAATYskJA==</data>
 				<key>Replace</key>
-				<data>TYnXugACAABFMclIid7oAAAAAE2J+kyLfdBJi4dgAQAATIls2PhJgcUAAgAASYHE</data>
+				<data>yAAAAEkp17gAAgAATYskJA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#13</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Find</key>
+				<data>4b+AQBUGTYnWugAQAABFMQ==</data>
+				<key>Replace</key>
+				<data>4b+AQBUGTYnWugACAABFMQ==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -392,45 +547,45 @@
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>DwAASMHpDGap/w8P</data>
+				<data>iWTY+EmBxAAQAABJgccA8A==</data>
 				<key>Replace</key>
-				<data>DwAASMHpCWap/w8P</data>
+				<data>iWTY+EmBxAACAABJgccA8A==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#15&amp;16&amp;17&amp;18&amp;19</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#15</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>QYP4B3dtRIpVEEQPt5+wAAAAQcHjEA+2h7YAAACD4AjB4ApECdiDyAKJhwoBAACJtw4BAABIiZcyAQAAioe2AAAAJAIPtsDB4B0JyImHOgEAAEHB4AhBD7bBRAnAicGByQAQAABFhNIPRMiJjz4BAA==</data>
+				<data>Bf8PAABIwegMZvfB/w8PlQ==</data>
 				<key>Replace</key>
-				<data>QYP4B3dtRA+2VRBED7efsAAAAEHB4xAPtoe2AAAAg+AIweAKRAnYg8gCiYcKAQAAibcOAQAASImXMgEAAIqHtgAAACQCD7bAweAdCciJhzoBAABBweAIQQ+2wcHgCZCQkJCQkJBECcBECdCJhz4BAA==</data>
+				<data>Bf8PAABIwegJZvfB/w8PlQ==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#20&amp;21&amp;22</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#16</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>bWlseQBM3+dk7uEBAxtod7NDkmZ8RmoM7MbBko1UOeURhexz8jC0QBHpwnZcOAy+0M5q79kte9ieOhQ3cXnHrtDMeglmxZUu</data>
+				<data>weIIQQ+2wcHgDEQJ0EQJwA==</data>
 				<key>Replace</key>
-				<data>bWlseQDCWAL25PP+QYRY8X3U26m0N/9ZbcbBko1UOeURhexz8jC0QBHpwnZcJgpXfgJHp7UycgW4UjduFQJD+QjMeglmxZUu</data>
+				<data>weIIQQ+2wcHgCUQJ0EQJwA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#23 - 50</string>
+				<string>IONVMeFamily Pike R. Alpha Patch#17</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Find</key>
-				<data>BIIBAAEc4q061bvcKJoqBqpZgJRd3EF0z3II86cE1z2UBX+yWgvIBe32TxcxN5/xrIknz7ziPD9hZcqBLvrsUYRsLTze0gnCsspSI82TviTPQYEMYk+j5CE8ZDDjkDQXoW3ceSBTUzoKiJYfqB1qBOE32UsLib5sM9qlHrBr76yxo9rYnYWdOtZ72M88yNo9Vc5MZkgDhtaqRohNUwsiiF1yW08xxgNhZU2BE3xzn8XC0sYiEXHs9V5AFntNK7LbVCu3jgqkpxlxm7dmyDgMbzbFAB6hcl3lRLZdcPiwB8mubZegvdAAAwDPPFVEYZlB/YeRX6T6eO+ZxS7u1cvxXEex0xMAAAAA</data>
+				<data>RYTJD5XAD7bAweAMRAnYRA==</data>
 				<key>Replace</key>
-				<data>BIIBAFjhf2OXh9C5pDLqAaMZOl8QQ8KDZNVIa9drFKiwvp8Zb1rrYOwRVgvIxJyL5wFhpAKV9CIY9usXBrgiYGahXiaBmWcaDnMAlLu2THdDzI4h3XN/02Dk9uL8RupUJJjhq4dJcZncs8Kd07co2Nml5nvrGUXV9jHJ2EgBMIm2OxjRuuApt0AWauSZ/dgXT1rlc4YcyYXCBRPCUqpm7C7Pcz202/io08M99B4aZvAcUzUv5e54pjCrZrtMFrz2Oh8hQZbFM0vXVKBXLEGAN9hmHe3o51sapwyyHikUZ827nlT+y4zHnWAMc0v7r6R4uQ1+8iaMwaf3gBjIlY8K2tFHkjMAAAAA</data>
+				<data>RYTJD5XAD7bAweAJRAnYRA==</data>
 			</dict>
 		</array>
 	</dict>
@@ -451,8 +606,6 @@
 		<string>10/29/13</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP111.88Z.0138.B03.1310291227</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
@@ -478,6 +631,8 @@
 					<string>2133</string>
 					<key>Part</key>
 					<string>M471A223SDR4-CPB</string>
+					<key>Serial</key>
+					<string>8281991A001</string>
 					<key>Size</key>
 					<string>4096</string>
 					<key>Slot</key>
@@ -492,6 +647,8 @@
 					<string>2133</string>
 					<key>Part</key>
 					<string>9905663-008.A00G</string>
+					<key>Serial</key>
+					<string>0723D87C</string>
 					<key>Size</key>
 					<string>16384</string>
 					<key>Slot</key>
