@@ -47,6 +47,7 @@
 			<string>SSDT-3.aml</string>
 			<string>SSDT-11.aml</string>
 			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-NVMe-Pcc.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
