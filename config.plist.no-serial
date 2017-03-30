@@ -12,9 +12,11 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>FixRegions_10000000</key>
+				<key>FIX_RTC_20000</key>
 				<true/>
-				<key>NewWay_80000000</key>
+				<key>FIX_TMR_40000</key>
+				<true/>
+				<key>FixRegions_10000000</key>
 				<true/>
 			</dict>
 			<key>Name</key>
@@ -31,22 +33,26 @@
 		</array>
 		<key>HaltEnabler</key>
 		<true/>
+		<key>ResetAddress</key>
+		<string>0x0CF9</string>
+		<key>ResetValue</key>
+		<string>0x06</string>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
 			<true/>
 			<key>Generate</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>SortedOrder</key>
 		<array>
-			<string>SSDT.aml</string>
 			<string>SSDT-0.aml</string>
 			<string>SSDT-1.aml</string>
 			<string>SSDT-2.aml</string>
 			<string>SSDT-3.aml</string>
 			<string>SSDT-11.aml</string>
 			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-T460s.aml</string>
 			<string>SSDT-NVMe-Pcc.aml</string>
 		</array>
 	</dict>
@@ -55,20 +61,26 @@
 		<key>Arguments</key>
 		<string>kext-dev-mode=1 rootless=0</string>
 		<key>Debug</key>
-		<true/>
+		<false/>
+		<key>DefaultLoader</key>
+		<string>boot.efi</string>
 		<key>DefaultVolume</key>
-		<string>Macintosh HD</string>
+		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
+		<true/>
+		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>4</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
 	<key>CPU</key>
 	<dict>
+		<key>HWPEnable</key>
+		<true/>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
@@ -79,26 +91,31 @@
 			<dict>
 				<key>Device</key>
 				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Key</key>
 				<string>AAPL,GfxYTile</string>
 				<key>Value</key>
-				<data>AQAAAA==</data>
+				<data>
+				AQAAAA==
+				</data>
 			</dict>
 		</array>
+		<key>Audio</key>
+		<dict>
+			<key>Inject</key>
+			<string>28</string>
+		</dict>
 		<key>USB</key>
 		<dict>
-			<key>AddClockID</key>
-			<true/>
 			<key>FixOwnership</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>GUI</key>
 	<dict>
-		<key>Language</key>
-		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
@@ -111,20 +128,11 @@
 			<integer>8</integer>
 		</dict>
 		<key>Scan</key>
-		<dict>
-			<key>Entries</key>
-			<true/>
-			<key>Legacy</key>
-			<false/>
-			<key>Linux</key>
-			<false/>
-			<key>Tool</key>
-			<false/>
-		</dict>
+		<true/>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>thinkpad</string>
+		<string>ThinkPad</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -150,6 +158,8 @@
 		<false/>
 		<key>Debug</key>
 		<false/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
 		<key>KernelCpu</key>
 		<false/>
 		<key>KernelHaswellE</key>
@@ -162,93 +172,9 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC 293 #1</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>hBnUEQ==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>kwLsEA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #2</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>hAjsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #3</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>hQjsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA#4</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>gxnUEQ==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #5</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>QcYGAEmLvCQ=</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>QcYGAUmLvCQ=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #6</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>QcYGAEiLu2g=</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>QcYGAUiLu2g=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC 293 #7</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>QcaGQwEAAAA=</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>QcaGQwEAAAE=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>change 15 port limit to 26 in XHCI kext (100-series)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>g710////EA==</data>
 				<key>MatchOS</key>
@@ -274,6 +200,24 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>10.11.dp1+ BT4LE-Handoff-Hotspot, credit RehabMan based on Dokterdok original</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SIX/dEdIiwc=
+				</data>
+				<key>MatchOS</key>
+				<string>10.11.x,10.12.x</string>
+				<key>Name</key>
+				<string>IOBluetoothFamily</string>
+				<key>Replace</key>
+				<data>
+				Qb4PAAAA60Q=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>AirPortBrcm4360 - fcvo patch</string>
 				<key>Disabled</key>
 				<false/>
@@ -285,48 +229,6 @@
 				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
 				<data>gflSqgAAZpA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - PCI Error 1</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>QTnEdRs=</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>QTnEZpA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - PCI Error 2</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>QQ+3zTnBdQw=</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>QQ+3zTnBZpA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - PCI Error 3</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g33EBHQG</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
-				<key>Replace</key>
-				<data>g33EBGaQ</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -358,17 +260,17 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>BCM94352-5GHz-US-FCC-dv</string>
+				<string>BCM94352 - 5Ghz US FCC - alternate from Ramalama</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>gflSqgAAdSk=</data>
+				<data>QYP8/3QsSA==</data>
 				<key>MatchOS</key>
-				<string>10.12.x</string>
+				<string>10.11.x,10.12.x</string>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
-				<data>gflSqgAAZpA=</data>
+				<data>ZscGI2HrKw==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -408,186 +310,6 @@
 				<key>Replace</key>
 				<data>iUXIOcbrUQ==</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#1</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>ibP4AgAAweAMBQAQAACJgw==</data>
-				<key>Replace</key>
-				<data>ibP4AgAAweAJBQAQAACJgw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#2</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>D7aMiIIAAACD+QwPhTIBAA==</data>
-				<key>Replace</key>
-				<data>D7aMiIIAAACD+QkPhTIBAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#3</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>AMeDpAAAAAAQAABIi0gISA==</data>
-				<key>Replace</key>
-				<data>AMeDpAAAAAACAABIi0gISA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#4</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>SYnGTYX2dGFBwecMSWP/vg==</data>
-				<key>Replace</key>
-				<data>SYnGTYX2dGFBwecJSWP/vg==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#5</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>hv8PAABIwegMD7cPgeH/Dw==</data>
-				<key>Replace</key>
-				<data>hv8PAABIwegJD7cPgeH/Dw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#6_7</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>icGB4f8PAABIAdFIgfn/DwAAdzs=</data>
-				<key>Replace</key>
-				<data>icGB4f8BAABIAdFIgfn/AQAAdzs=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#8</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>SYHF/w8AAEnB7QxJiwQkSA==</data>
-				<key>Replace</key>
-				<data>SYHF/w8AAEnB7QlJiwQkSA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#9_10</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>BgIAAEyNuAAQAABMiflIgeEA8P//SYmGGgEAAEmJjiIBAABBvAAQAABJKfQ=</data>
-				<key>Replace</key>
-				<data>BgIAAEyNuAACAABMiflIgeEA8P//SYmGGgEAAEmJjiIBAABBvAACAABJKfQ=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#11</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>AABJiY4iAQAAugAQAABIKQ==</data>
-				<key>Replace</key>
-				<data>AABJiY4iAQAAugACAABIKQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#12</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>yAAAAEkp17gAEAAATYskJA==</data>
-				<key>Replace</key>
-				<data>yAAAAEkp17gAAgAATYskJA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#13</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>4b+AQBUGTYnWugAQAABFMQ==</data>
-				<key>Replace</key>
-				<data>4b+AQBUGTYnWugACAABFMQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#14</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>iWTY+EmBxAAQAABJgccA8A==</data>
-				<key>Replace</key>
-				<data>iWTY+EmBxAACAABJgccA8A==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#15</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>Bf8PAABIwegMZvfB/w8PlQ==</data>
-				<key>Replace</key>
-				<data>Bf8PAABIwegJZvfB/w8PlQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#16</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>weIIQQ+2wcHgDEQJ0EQJwA==</data>
-				<key>Replace</key>
-				<data>weIIQQ+2wcHgCUQJ0EQJwA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#17</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Find</key>
-				<data>RYTJD5XAD7bAweAMRAnYRA==</data>
-				<key>Replace</key>
-				<data>RYTJD5XAD7bAweAJRAnYRA==</data>
-			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -603,81 +325,13 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>10/29/13</string>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>08</string>
-		<key>Family</key>
-		<string>MacBook Pro</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
-		<key>Memory</key>
-		<dict>
-			<key>Channels</key>
-			<integer>2</integer>
-			<key>Modules</key>
-			<array>
-				<dict>
-					<key>Frequency</key>
-					<string>2133</string>
-					<key>Part</key>
-					<string>M471A223SDR4-CPB</string>
-					<key>Serial</key>
-					<string>8281991A001</string>
-					<key>Size</key>
-					<string>4096</string>
-					<key>Slot</key>
-					<string>0</string>
-					<key>Type</key>
-					<string>DDR4</string>
-					<key>Vendor</key>
-					<string>Lenovo</string>
-				</dict>
-				<dict>
-					<key>Frequency</key>
-					<string>2133</string>
-					<key>Part</key>
-					<string>9905663-008.A00G</string>
-					<key>Serial</key>
-					<string>0723D87C</string>
-					<key>Size</key>
-					<string>16384</string>
-					<key>Slot</key>
-					<string>2</string>
-					<key>Type</key>
-					<string>DDR4</string>
-					<key>Vendor</key>
-					<string>Kingston</string>
-				</dict>
-			</array>
-			<key>SlotCount</key>
-			<integer>4</integer>
-		</dict>
-		<key>Mobile</key>
-		<true/>
 		<key>ProductName</key>
-		<string>MacBookPro11,1</string>
-		<key>Trust</key>
-		<true/>
-		<key>Version</key>
-		<string>1.0</string>
+		<string>MacBookPro13,1</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
-		<key>InjectSystemID</key>
-		<true/>
 	</dict>
 </dict>
 </plist>
