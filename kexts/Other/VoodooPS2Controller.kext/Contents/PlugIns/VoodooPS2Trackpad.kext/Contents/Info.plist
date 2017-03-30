@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>16D17a</string>
+	<string>16E144f</string>
 	<key>CFBundleExecutable</key>
 	<string>VoodooPS2Trackpad</string>
 	<key>CFBundleGetInfoString</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.25c</string>
+	<string>1.8.25e</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -42,132 +42,6 @@
 	<string>8C1002</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>ALPS GlidePoint</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.voodoo.driver.PS2Trackpad</string>
-			<key>IOClass</key>
-			<string>ApplePS2ALPSGlidePoint</string>
-			<key>IOProbeScore</key>
-			<integer>1500</integer>
-			<key>IOProviderClass</key>
-			<string>ApplePS2MouseDevice</string>
-			<key>Platform Profile</key>
-			<dict>
-				<key>Default</key>
-				<dict>
-					<key>DisableDevice</key>
-					<false/>
-				</dict>
-				<key>HPQOEM</key>
-				<dict>
-					<key>1411</key>
-					<string>ProBook</string>
-					<key>1619</key>
-					<string>ProBook</string>
-					<key>161C</key>
-					<string>ProBook</string>
-					<key>164F</key>
-					<string>ProBook</string>
-					<key>167C</key>
-					<string>ProBook</string>
-					<key>167E</key>
-					<string>ProBook</string>
-					<key>1680</key>
-					<string>ProBook</string>
-					<key>179B</key>
-					<string>ProBook</string>
-					<key>179C</key>
-					<string>ProBook</string>
-					<key>17A9</key>
-					<string>ProBook</string>
-					<key>17F0</key>
-					<string>ProBook</string>
-					<key>17F3</key>
-					<string>ProBook</string>
-					<key>17F6</key>
-					<string>ProBook</string>
-					<key>1942</key>
-					<string>ProBook</string>
-					<key>1949</key>
-					<string>ProBook</string>
-					<key>198F</key>
-					<string>ProBook</string>
-					<key>ProBook</key>
-					<dict>
-						<key>DisableDevice</key>
-						<true/>
-					</dict>
-					<key>ProBook-102</key>
-					<string>ProBook</string>
-					<key>ProBook-87</key>
-					<string>ProBook</string>
-				</dict>
-			</dict>
-		</dict>
-		<key>Sentelic FSP</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.voodoo.driver.PS2Trackpad</string>
-			<key>IOClass</key>
-			<string>ApplePS2SentelicFSP</string>
-			<key>IOProbeScore</key>
-			<integer>5500</integer>
-			<key>IOProviderClass</key>
-			<string>ApplePS2MouseDevice</string>
-			<key>Platform Profile</key>
-			<dict>
-				<key>Default</key>
-				<dict>
-					<key>DisableDevice</key>
-					<false/>
-				</dict>
-				<key>HPQOEM</key>
-				<dict>
-					<key>1411</key>
-					<string>ProBook</string>
-					<key>1619</key>
-					<string>ProBook</string>
-					<key>161C</key>
-					<string>ProBook</string>
-					<key>164F</key>
-					<string>ProBook</string>
-					<key>167C</key>
-					<string>ProBook</string>
-					<key>167E</key>
-					<string>ProBook</string>
-					<key>1680</key>
-					<string>ProBook</string>
-					<key>179B</key>
-					<string>ProBook</string>
-					<key>179C</key>
-					<string>ProBook</string>
-					<key>17A9</key>
-					<string>ProBook</string>
-					<key>17F0</key>
-					<string>ProBook</string>
-					<key>17F3</key>
-					<string>ProBook</string>
-					<key>17F6</key>
-					<string>ProBook</string>
-					<key>1942</key>
-					<string>ProBook</string>
-					<key>1949</key>
-					<string>ProBook</string>
-					<key>198F</key>
-					<string>ProBook</string>
-					<key>ProBook</key>
-					<dict>
-						<key>DisableDevice</key>
-						<true/>
-					</dict>
-					<key>ProBook-102</key>
-					<string>ProBook</string>
-					<key>ProBook-87</key>
-					<string>ProBook</string>
-				</dict>
-			</dict>
-		</dict>
 		<key>Synaptics TouchPad</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
