@@ -1,11 +1,11 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20160422-64(RM)
+ * AML/ASL+ Disassembler version 20161210-64(RM)
  * Copyright (c) 2000 - 2016 Intel Corporation
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of DSDT.aml, Sat Sep  3 18:26:24 2016
+ * Disassembly of DSDT.aml, Tue Jul 11 14:01:39 2017
  *
  * Original Table Header:
  *     Signature        "DSDT"
@@ -3426,14 +3426,14 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
                     0x0CF7,             // Range Maximum
                     0x0000,             // Translation Offset
                     0x0CF8,             // Length
-                    ,, , TypeStatic)
+                    ,, , TypeStatic, DenseTranslation)
                 WordIO (ResourceProducer, MinFixed, MaxFixed, PosDecode, EntireRange,
                     0x0000,             // Granularity
                     0x0D00,             // Range Minimum
                     0xFFFF,             // Range Maximum
                     0x0000,             // Translation Offset
                     0xF300,             // Length
-                    ,, , TypeStatic)
+                    ,, , TypeStatic, DenseTranslation)
                 DWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, Cacheable, ReadWrite,
                     0x00000000,         // Granularity
                     0x000A0000,         // Range Minimum
@@ -9711,17 +9711,39 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
                 {
                     Store (0xFF, Local0)
                 }
-                ElseIf (\H8DR)
-                {
-                    Store (HPBU, Local1)
-                    Store (HBID, Local2)
-                }
                 Else
                 {
-                    Store (RBEC (0x47), Local2)
-                    And (Local2, 0x01, Local1)
-                    And (Local2, 0x04, Local2)
-                    ShiftRight (Local2, 0x02, Local2)
+                    If (\H8DR)
+                    {
+                        Store (HPBU, Local1)
+                        Store (HBID, Local2)
+                    }
+                    Else
+                    {
+                        Store (RBEC (0x47), Local2)
+                        And (Local2, 0x01, Local1)
+                        And (Local2, 0x04, Local2)
+                        ShiftRight (Local2, 0x02, Local2)
+                    }
+
+                    If (Local2)
+                    {
+                        Store (0x0F, Local0)
+                    }
+                    ElseIf (HDUB)
+                    {
+                        Store (0x0F, Local0)
+                    }
+                    ElseIf (LOr (LEqual (\IDET, 0x03), LEqual (\IDET, 0x06)))
+                    {
+                        Store (\IDET, Local0)
+                    }
+                    Else
+                    {
+                        Store (0x07, Local0)
+                    }
+
+                    If (LEqual (Local0, 0x0F)) {}
                 }
 
                 If (LAnd (\HDUB, LLess (Local0, 0x0C)))
@@ -10631,13 +10653,18 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
 
                     Or (WGFL, 0x02, WGFL)
                 }
-                ElseIf (\H8DR)
-                {
-                    Store (Zero, \_SB.PCI0.LPC.EC.DCWW)
-                }
                 Else
                 {
-                    \MBEC (0x3A, 0xBF, 0x00)
+                    If (\H8DR)
+                    {
+                        Store (Zero, \_SB.PCI0.LPC.EC.DCWW)
+                    }
+                    Else
+                    {
+                        \MBEC (0x3A, 0xBF, 0x00)
+                    }
+
+                    And (WGFL, Not (0x02), WGFL)
                 }
             }
 
@@ -10670,13 +10697,18 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
 
                     Or (WGFL, 0x20, WGFL)
                 }
-                ElseIf (\H8DR)
-                {
-                    Store (Zero, \_SB.PCI0.LPC.EC.DCBD)
-                }
                 Else
                 {
-                    \MBEC (0x3A, 0xEF, 0x00)
+                    If (\H8DR)
+                    {
+                        Store (Zero, \_SB.PCI0.LPC.EC.DCBD)
+                    }
+                    Else
+                    {
+                        \MBEC (0x3A, 0xEF, 0x00)
+                    }
+
+                    And (WGFL, Not (0x20), WGFL)
                 }
             }
 
@@ -12965,7 +12997,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
         {
             Name (_HID, EisaId ("PNP0C14"))  // _HID: Hardware ID
             Name (_UID, 0x03)  // _UID: Unique ID
-            Name (_WDG, /**** Is ResourceTemplate, but EndTag not at buffer end ****/ Buffer (0x3C)
+            Name (_WDG, Buffer (0x3C)
             {
                 /* 0000 */  0x79, 0x36, 0x4D, 0x8F, 0x9E, 0x74, 0x79, 0x44,
                 /* 0008 */  0x9B, 0x16, 0xC6, 0x26, 0x01, 0xFD, 0x25, 0xF0,
@@ -15166,8 +15198,9 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "TP-N1C  ", 0x00001130)
             Name (_UID, "IoTraps")  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
-                Store (ResourceTemplate ()
+                Store (Buffer (0x02)
                     {
+                         0x79, 0x00                                     
                     }, Local0)
                 Name (BUF0, ResourceTemplate ()
                 {
